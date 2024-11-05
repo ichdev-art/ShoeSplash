@@ -18,14 +18,14 @@ body {
 }
 
 p.left {
-    float: lefts;
-    display: flex;
+    float: left;
+    /* display: flex; */
     flex-direction: column;
     align-items: flex-end;
     margin: 1.2em;
 }
 
-i {
+.container i {
     color: #f1c3f3;
     font-size: 1.6em;
 }
@@ -33,6 +33,7 @@ i {
 p span {
     font-weight: bold;
 }
+
 header.container a img {
     float: left;
 }
@@ -60,10 +61,10 @@ nav a {
 }
 
 #cart {
-   float: right;
-   display: flex;
-   justify-content: flex-end;
-   align-items: center;
+    float: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 main.container {
@@ -83,9 +84,9 @@ span {
     font-weight: normal;
     font-size: 0.9em;
 }
+
 #slider img {
     width: 100%;
-
 }
 
 section#slider {
@@ -104,10 +105,10 @@ section#select {
     justify-content: space-between;
     flex-wrap: wrap;
     background: white;
-    margin-top: 1em;   
+    margin-top: 1em;
     width: 100%;
     padding: 1em 0;
-    
+
 }
 
 section#select article h3 {
@@ -116,10 +117,14 @@ section#select article h3 {
     font-family: "Courgette", sans-serif;
 }
 
+#info article small {
+    font-family: sans-serif;
+}
+
 section#select article img {
-    /* width: 50%;
-    height: 50%; */
-    margin: 1.5em;
+    width: 50%;
+    height: 50%;
+    margin: 2em;
     margin-top: 2.4em;
 }
 
@@ -127,7 +132,6 @@ section#news {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-top: 1.5em;
     margin-bottom: 1.5em;
     padding-top: 2em;
     padding-bottom: 2em;
@@ -140,7 +144,8 @@ section#news article {
     align-items: center;
 }
 
-section#news article h3,small {
+section#news article h3,
+small {
     font-family: "Courgette", sans-serif;
 
 }
@@ -157,11 +162,11 @@ section#news article img {
     width: 90%;
 }
 
- #new h2 {
+#new h2 {
     background: #EA32C4;
     padding: 0.3em;
     margin-bottom: 0.8em;
- }
+}
 
 #best h2 {
     background: #92BE44;
@@ -175,6 +180,38 @@ section#news article img {
     margin-bottom: 0.8em
 }
 
+footer section#info {
+    display: flex;
+    justify-content: space-around;
+    background: #E4AFE2;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 
+#info article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+#bottombar {
+    background: #F6D4F5;
+    display: flex;
+    justify-content: space-around;
+}
 
+#bottombar article {
+    display: flex;
+    flex-direction: column;
+}
+
+#bottombar article ul li {
+    list-style: none;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#bottombar article h2 {
+    text-align: center;
+    font-size: 1.2em;
+}
