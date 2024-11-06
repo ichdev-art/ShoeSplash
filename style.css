@@ -44,7 +44,7 @@ nav {
 
 header .container {
     background: #F6D4F5;
-    padding: 0 10em;
+    padding: 0 7.9em;
 }
 
 nav {
@@ -206,7 +206,7 @@ section#news article img {
 #best h2 {
     background: #92BE44;
     padding: 0.3em;
-    margin-bottom: 0.8em
+    margin-bottom: 0.8em;
 }
 
 #crush h2 {
@@ -259,8 +259,56 @@ footer section#info {
 }
 
 @media (max-width: 640px) {
-
+    
     #cart {
         display: none;
+    }
+
+    div.container a img {
+        float: none;
+        width: 100%;
+    }
+
+    header .container {
+        flex-direction: column;
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    section#slider h2 {
+        position: static;
+        margin-bottom: 0.7em;
+    }
+
+    section#news {
+        flex-direction: column;
+    }
+
+    section#news article {
+        margin: 0.8em 0;
+    }
+
+    footer section#info {
+        flex-direction: column;
+        align-content: center;
+    }
+
+    #info article{
+        margin: 0.8em 0;
+    }
+
+    #bottombar {
+        flex-direction: column;
+    }
+
+    #bottombar article {
+        margin: 0.8em 0;
+    }
+
+    #bottombar article ul li {
+        margin: 0.2em;
     }
 }
