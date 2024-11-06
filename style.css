@@ -51,13 +51,19 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 2em 0 2em 0;
+}
+
+.container nav a:hover {
+    transition: 0.2s ease;
+    background: #E4AFE2;
+    
 }
 
 nav a {
     text-decoration: none;
     font-size: 1.2em;
     color: black;
+    padding: 1em;
 }
 
 #cart {
@@ -94,6 +100,7 @@ section#slider {
     background: white;
     padding: 1em;
     width: 71.5%;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 section#select h1 {
@@ -109,8 +116,31 @@ section#select {
     margin-top: 1em;
     width: 73.8%;
     padding: 1em 0;
-
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
+
+
+/* Style par défaut : toutes les images en couleur */
+.escarpin img {
+    filter: grayscale(0%);
+    transition: filter 0.2s ease, transform 0.3s ease;
+}
+
+/* Lorsqu'un escarpin est survolé, grise les autres */
+section#select:has(.escarpin:hover) .escarpin:not(:hover) img {
+    filter: opacity(50%);
+}
+
+section#select:has(.escarpin:hover) .escarpin:not(:hover) h3 {
+    filter: opacity(50%);
+}
+
+/* Agrandissement léger de l'escarpin survolé */
+.escarpin:hover img {
+    transform: scale(1.2);
+}
+
+/* Cette solution fonctionnera dans les navigateurs qui supportent :has(), mais elle ne sera pas compatible avec tous (comme Chrome et Firefox pour le moment). */
 
 section#select article h3 {
     position: absolute bottom;
@@ -133,7 +163,6 @@ section#news {
     display: flex;
     justify-content: space-between;
     width: 73.8%;
-    /* padding: 2em; */
     margin-top: 2em;
     margin-bottom: 2em;
 }
@@ -143,6 +172,11 @@ section#news article {
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+h3 {
+    font-family: "Courgette",sans-serif;
 }
 
 section#news article h3,
@@ -195,6 +229,13 @@ footer section#info {
     align-items: center;
 }
 
+#info article:hover {
+    transition: 0.6s ease;
+    color: white;
+    cursor: pointer;
+}
+
+
 #bottombar {
     background: #F6D4F5;
     display: flex;
@@ -215,4 +256,11 @@ footer section#info {
 #bottombar article h2 {
     text-align: center;
     font-size: 1.2em;
+}
+
+@media (max-width: 640px) {
+
+    #cart {
+        display: none;
+    }
 }
