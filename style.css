@@ -19,7 +19,7 @@ body {
 
 p.left {
     float: left;
-    /* display: flex; */
+    display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin: 1.2em;
@@ -44,7 +44,7 @@ nav {
 
 header .container {
     background: #F6D4F5;
-    padding: 0 20em;
+    padding: 0 10em;
 }
 
 nav {
@@ -93,6 +93,7 @@ section#slider {
     margin-top: 2em;
     background: white;
     padding: 1em;
+    width: 71.5%;
 }
 
 section#select h1 {
@@ -102,11 +103,11 @@ section#select h1 {
 
 section#select {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
     background: white;
     margin-top: 1em;
-    width: 100%;
+    width: 73.8%;
     padding: 1em 0;
 
 }
@@ -131,10 +132,10 @@ section#select article img {
 section#news {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    margin-bottom: 1.5em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    width: 73.8%;
+    /* padding: 2em; */
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 section#news article {
